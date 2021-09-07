@@ -1,0 +1,37 @@
+{
+    "buildings": [
+        {
+            "unit_type": "house",
+            "unit_name": "House",
+            "cost": 150
+        },
+        {
+            "unit_type": "mill",
+            "unit_name": "Mill",
+            "cost": 200
+        },
+        {
+            "unit_type": "barracks",
+            "unit_name": "Barracks",
+            "cost": 250
+        },
+        {
+            "unit_type": "mine",
+            "unit_name": "Gold Mine",
+            "cost": 275
+        }
+    ],
+    "units": [
+        {
+            "name": "peasant"
+        }
+    ],
+    "defenses": [
+        {
+            "name": "wall"
+        },
+        {
+            "name": "watchtower"
+        }
+    ]
+}
