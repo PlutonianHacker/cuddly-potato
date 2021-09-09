@@ -23,15 +23,15 @@
     ],
     "units": [
         {
-            "name": "peasant"
+            "unit_name": "peasant"
         }
     ],
     "defenses": [
         {
-            "name": "wall"
+            "unit_name": "wall"
         },
         {
-            "name": "watchtower"
+            "unit_name": "watchtower"
         }
     ]
 }

@@ -10,7 +10,7 @@ pub struct Units {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Unit {
-    pub name: String,
+    pub unit_name: String,
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
@@ -47,4 +47,32 @@ fn load_units() -> Result<Data> {
 
     println!("{:?}", v.buildings[0]);
     Ok(v)
+}
+
+#[derive(Debug)]
+pub struct Resources {
+    pub gold: i32,
+}
+
+impl Resources {
+    pub fn spend(&mut self, price: i32) {
+        self.gold -= price;
+    }
+    pub fn can_spend(&self, price: i32) -> bool {
+        if self.gold - price <= 0 {
+            return false;
+        } else {
+            return true;
+        }
+    }
+    pub fn _add(&mut self, amount: i32) {
+        self.gold += amount;
+    }
+}
+
+impl FromWorld for Resources {
+    fn from_world(_world: &mut World) -> Self {
+        let start_val = 2000;
+        Resources { gold: start_val }
+    }
 }
